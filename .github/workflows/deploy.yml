@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies
@@ -36,8 +36,22 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          if [ -d "./dist" ]; then
+            echo "dist directory found"
+            ls -la ./dist
+          else
+            echo "Error: ./dist not found after build"
+            ls -la
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
