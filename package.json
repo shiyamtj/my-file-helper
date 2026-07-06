@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://[username].github.io/my-file-helper",
+  "homepage": "https://shiyamtj.github.io/my-file-helper",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
