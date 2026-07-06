@@ -31,7 +31,7 @@ const Footer = () => {
               Free to use, no signup required. Hosted on GitHub Pages.
             </p>
             <a
-              href="https://github.com"
+              href="https://github.com/shiyamtj/my-file-helper"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
